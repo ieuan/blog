@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PostController@index');
+
+Auth::routes();
+
+Route::resource('posts', 'PostController', [
+	'names' => [
+		'index' => 'posts',
+		'store' => 'posts.store',
+		'create' => 'posts.create'
+	]
+]);

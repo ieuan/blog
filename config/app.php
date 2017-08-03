@@ -179,6 +179,7 @@ return [
 
 
 	    Jenssegers\Mongodb\MongodbServiceProvider::class,
+	    App\Providers\ComposerServiceProvider::class,
 
     ],
 
